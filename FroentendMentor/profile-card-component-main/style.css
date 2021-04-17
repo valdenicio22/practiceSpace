@@ -1,0 +1,132 @@
+:root{
+  font-size: 18px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+ font-family: 'kumbh Sans', sans-serif;
+ color: hsl(0, 11%, 12%);   
+}
+
+.wrapper{
+  background-color: hsl(185, 75%, 39%);
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-flow: column nowrap;
+
+  position: relative;
+  overflow: hidden;
+}
+.circles{
+  position: absolute;
+}
+.circle-top{
+  position: absolute;
+  transform: translate(55px, 55px);
+}
+
+
+.card{
+  width: min(376px, 90%);
+  border-radius: 1.1rem;
+  background-color: #fff;
+
+  overflow: hidden;
+  
+  position: absolute;
+}
+
+.img-header{
+  width: 100%;
+  height: 150px;
+}
+
+.card-body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-flow: column nowrap;
+}
+.card-body .img-person-holder{
+  width: 110px;
+  height: 110px;
+  
+  border-radius: 50%;
+  border: 5px solid white;
+
+  margin: -3.5rem auto 1.2rem;
+  overflow: hidden;
+}
+
+.img-person-holder .img-person{
+  width: 100%;
+  height: 100%;
+}
+.card-body .title-2{
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.title-2 span{
+  font-size: 0.9rem;
+  opacity: 0.5;
+  padding-left: 0.2rem;
+}
+
+.card-body h4{
+  font-size: 0.9rem;
+  opacity: 0.5;
+  margin: 0.7rem auto 1.5rem;
+}
+
+.card-fotter{
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-flow: row wrap;
+
+  border-top: 1px solid rgba(214, 214, 214, 0.7);
+
+}
+.card-fotter h2{
+  text-align: center;
+  flex: 0 0 33%;
+  order: -1;
+
+  padding-top: 1.5rem;
+
+  font-size: 1rem;
+  font-weight: 700;
+}
+.card-fotter h4{
+  text-align: center;
+  letter-spacing: 1px;
+  flex: 0 0 33%;
+
+  font-size: 0.7rem;
+  opacity: 0.5;
+  
+  padding: 0.4rem 1rem 1.5rem;
+}
+
+.attribution{
+  width: min(376px, 90%);
+
+  margin-top: 0.7rem;
+
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 1.2rem;
+}
