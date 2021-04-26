@@ -1,0 +1,79 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(6, 100, 100);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container{
+  background-color: white;
+
+  display: flex;
+  flex-flow: column wrap;
+  padding: 1.5rem 1rem;
+}
+
+.header{
+  margin-bottom: 1rem;
+}
+
+.main{
+  display: flex;
+  justify-content: space-between;
+}
+
+.main section{
+  margin-right: 2rem;
+}
+
+.formInfo h2{
+  margin: 1rem 0;
+}
+
+.formInfo{
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.formInfo input{
+  margin-bottom: 1rem;
+}
+
+input, button{
+  padding: 0.2rem;
+  transition: filter 0.2s;
+}
+
+button:hover{
+  filter: brightness(0.9);
+}
+
+.resultList{
+  width: 100%;
+  margin: 0.8rem 0 0.8rem;
+  font-weight: 600;
+}
+.resultList p.isActive{
+  background-color: rgb(88, 216, 88);
+  padding: 0.2rem;
+  
+}
+.resultList p.invalidActive{
+  background-color: rgb(226, 117, 98);
+  padding: 0.2rem;
+}
+
+
+
+
+
+
