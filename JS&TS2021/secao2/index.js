@@ -1,12 +1,13 @@
 function escope() {
-
-  const formInformations = document.querySelector('.formInformations')
   const resultList = document.querySelector('.resultList')
   const btnSubmit = document.querySelector('.btnSubmit')
+
+  const people = [];
 
   function createLi() {
     return document.createElement('li');
   }
+
   const clear = (name, lastname, weight, height) => {
     name.value = ''
     lastname.value = ''
@@ -14,39 +15,28 @@ function escope() {
     height.value = ''
   }
 
-
   const handleClick = (e) => {
     e.preventDefault();
 
     const formName = document.querySelector('.formName')
-    const lastname = document.querySelector('.lastname')
+    const formLastname = document.querySelector('.formLastname')
     const formWeight = document.querySelector('.formWeight')
     const formHeight = document.querySelector('.formHeight')
-    const people = [];
 
     people.push({
       name: formName.value,
-      lastname: lastname.value,
+      lastname: formLastname.value,
       weight: formWeight.value,
       height: formHeight.value,
     })
 
-    people.map(person => {
-      resultList.appendChild(
-        `<li>
-          ${person.name}
-          ${person.lastname}
-          ${person.weight}
-          ${person.height}
-        </li>`
-      )
-    }
+    console.log(people);
 
-    // const li = createLi();
-    // li.innerHTML += `${name.value} ${lastname.value} ${weight.value} ${height.value}`
-    // resultList.appendChild(li);
+    const li = createLi();
+    li.innerHTML += `${formName.value} ${formLastname.value} ${formWeight.value} ${formHeight.value}`
+    resultList.appendChild(li);
 
-    clear(formName, lastname, formWeight, formHeight);
+    clear(formName, formLastname, formWeight, formHeight);
     formName.focus();
 
   }
