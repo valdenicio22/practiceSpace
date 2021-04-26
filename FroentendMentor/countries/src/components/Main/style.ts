@@ -14,6 +14,13 @@ export const Container = styled.div`
   margin: 1.5rem auto 0;
   border: 1px solid black;
 
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+
+  
+
+
   .inputSelectContainer{
     input{
       width: 100%;

@@ -1,0 +1,43 @@
+.wrapper{
+
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+   "navbar navbar navbar navbar"
+   "sidebar main main main"
+   "sidebar content1 content2 content3"
+   "sidebar footer footer footer";
+
+}
+.navbar{
+  grid-area: navbar;
+  background-color: #777;
+}
+.sidebar{
+  grid-area: sidebar;
+  background-color: #777;
+}
+.main{
+  grid-area: main;
+  background-color: #888;
+}
+.content1{
+  grid-area: content1;
+  background-color: #999;
+}
+.content2{
+  grid-area: content2;
+  background-color: #aaa;
+}
+.content3{
+  grid-area: content3;
+  background-color: #bbb;
+}
+.footer{
+  grid-area: footer;
+  background-color: #bbb;
+}
