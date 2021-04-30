@@ -1,4 +1,5 @@
 const http = require('http')
+<<<<<<< HEAD
 const fs = require('fs')
 const port = 3000
 
@@ -19,3 +20,8 @@ server.listen(port, function (error) {
   if (error) console.log('Something went wrong', error)
   else console.log('Server is listening on port', port)
 })
+=======
+const port = 3000
+
+const server = http.createServer()
+>>>>>>> e5ad97d76b0a796556e787de604fb10254c1877e
