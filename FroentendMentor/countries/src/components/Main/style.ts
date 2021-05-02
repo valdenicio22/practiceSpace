@@ -8,20 +8,17 @@ export const Wrapper = styled.main`
   }
 `
 export const Container = styled.div`
-  width: 90%;
-  height: 90%;
+  padding: 2rem 1rem;
 
-  margin: 1.5rem auto 0;
-  border: 1px solid black;
-
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr;
-  grid-auto-rows: auto;
-
-  
-
+  grid-auto-rows: auto; */
 
   .inputSelectContainer{
+
+    display: flex;
+    flex-flow: column nowrap;
+    
     input{
       width: 100%;
       padding: 1rem;
@@ -43,13 +40,7 @@ export const cardsContainer = styled.div`
   width: 90%;
   margin: 1.5rem auto;
 
-  @media(min-width: 376px){
-    width: 100%;
-  }
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 ` 

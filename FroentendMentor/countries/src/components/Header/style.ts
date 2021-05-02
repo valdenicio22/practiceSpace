@@ -2,35 +2,28 @@ import styled from 'styled-components'
 
 export const WrapperHeader = styled.header`
   width: 100%;
-  height: 80px;
+  padding: 2.5rem 1rem;
 
   background-color: var(--Dark-Blue);
   color: var(--White);
   font-weight: 500;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  
-  padding: 1.5rem 1rem;
-
-
-
-  h3{
-    font-size: 1rem;
-    font-weight: 500;
-  }
-
-  .themMode{
-    
+  div{
     display: flex;
     align-items: center;
-    justify-content: center;
-
+    justify-content: flex-end;
+    
+    h3{
+      font-size: 1rem;
+      font-weight: 500;
+      margin-right: auto;
+    }
+    p{  
+      margin-right: 0.5rem;
+    }
     span{
-      font-size: 0.8rem;
-      font-weight: normal;
-      margin-left: 0.5rem;
+      font-size: 0.9rem;
     }
   }
+
 `

@@ -3,8 +3,8 @@ import * as S from './style'
 
 export const Header = () => (
   <S.WrapperHeader>
-    <h3>Where in the world?</h3>
-    <div className="themMode">
+    <div>
+      <h3>Where in the world?</h3>
       <p>Moon</p>
       <span>Dark Mode</span>
     </div>

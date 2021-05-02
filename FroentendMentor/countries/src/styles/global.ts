@@ -22,13 +22,6 @@ export const GlobalStyle = createGlobalStyle`
   }
   body{
     font-family: 'Nunito Sans', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    @media(min-width: 376px){
-      display: block;
-    }
   }
   button{
     cursor: pointer;
