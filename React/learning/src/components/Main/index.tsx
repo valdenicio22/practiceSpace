@@ -1,6 +1,12 @@
 import React from 'react'
 import { Employee } from '../Employee'
 import axios from 'axios'
+import styles from './styles.module.scss'
+import {Switch, Route, Link} from 'react-router-dom'
+import { About } from '../About'
+import { Contact } from '../Contact'
+import App from '../../App'
+import { useHistory } from 'react-router-dom'
 
 interface todosInfo{
   completed: boolean,
@@ -39,75 +45,51 @@ export const Main = () => {
       age: '28'
     }
   ]
-  const employeeHome = [
-    {
-      name: "Teste",
-      age: "28"
-    }
-  ]
 
-  // const [logged, setLogged] = React.useState(false)
   const [isActive, setIsActive] = React.useState(false);
   const [todos, setTodo] = React.useState<todosInfo[]>([])
 
   React.useEffect(() => {
     axios.get(`https://jsonplaceholder.typicode.com/todos`)
       .then((response) => {
-        console.log(response)
         const todosData = response.data
-        console.log(todosData)
         setTodo(todosData)
       })
   }, [])
 
+  const history = useHistory();
   return (
-    <div className="peopleContainer">
-      <p>Wanna count the employees ?</p>
-      <button onClick={() => setIsActive(!isActive)}>
-        {isActive ? 'Im done' : 'Yes'}
-      </button>
-      {isActive && (<Employee />)}
+    // <div className="peopleContainer">
+    //   <p>Wanna count the employees ?</p>
+    //   <button onClick={() => setIsActive(!isActive)}>
+    //     {isActive ? 'Im done' : 'Yes'}
+    //   </button>
+    //   {isActive && (<Employee />)}
       
-        {/* {todos.map(todo => {
-          console.log(todo)
-          return (
-          <ul key={todo.id}>
-            <li>{todo.userID}</li>
-            <li>{todo.id}</li>
-            <li>{todo.title}</li>
-            <li>{todo.completed}</li>
-          </ul>
-          )
-        })} */}
-      <ul>
-      {todos && todos.map(todo => (
-        <li key={todo.id}>{todo.title}</li>
-      ))}
-      </ul>
+    //   <ul>
+    //   {todos && todos.map(todo => (
+    //     <li key={todo.id}>{todo.title}</li>
+    //   ))}
+    //   </ul>
 
+    // </div>
+    <div className={styles.btn}>
+      <Link to='/about'>About Us</Link>
+      <button onClick={() => history.push('/contact')}>Contact Us</button>
+      <button onClick={() => history.push('/')}>Home Page</button>
+
+      <Switch>
+        <Route path='/about'>
+          <About />
+        </Route>
+        <Route path='/contact'>
+          <Contact />
+        </Route>
+        <Route path='/'>
+          <App />
+        </Route>
+      </Switch>
     </div>
 
   )
 }
-
-{/* <h2>{logged ? 'You are logged' : 'Please Log in'} </h2>
-      <button onClick={() => setLogged(!logged)}>
-       {logged ? 'Log out' : 'Login' }
-      </button>
-      {logged && (
-       <h1>Hey you</h1>
-     )}
-     
-     
-
-        <button onClick={() => handleChange()}>{number}</button>
-       
-      {employees && employeeInfo.length > 0 && (
-        <>
-        {console.log(employees)}
-         <h2>Employee Informations</h2>
-         {employeeInfo.map(employee => (
-           <Employee key={employee.id} {...employee} />
-         ))}
-       </>
-      )} */}
