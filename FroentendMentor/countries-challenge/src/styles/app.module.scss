@@ -1,0 +1,39 @@
+.mainContainer{
+  width: 100%;
+
+  background-color: var(--Very-Dark-Blue);
+
+  .cardContainer{
+    width: 80%;
+    margin: 0 auto;
+    
+    box-shadow: rgba(41, 22, 22, 0.6);
+
+    .cardGrid{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    
+  }
+  @media (min-width: 500px){
+    .cardContainer{
+      width: 90%;
+
+      .cardGrid{
+        grid-template-columns: 1fr 1fr;
+      }
+      @media (min-width: 768px){
+        .cardGrid{
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (min-width: 1024px){
+        .cardGrid{
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+    }
+  }
+}

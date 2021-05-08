@@ -1,0 +1,23 @@
+.wrapper{
+  background-color: var(--Dark-Blue);
+  padding: 2rem 0;
+
+  .container{
+    width: 90%;
+    margin: 0 auto;
+
+    ul{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      list-style: none;
+    }
+    li{
+      margin-left: 0.5rem
+    }
+    li:first-child{
+      margin-right: auto;
+    }
+  }
+  
+}
